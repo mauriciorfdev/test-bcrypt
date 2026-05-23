@@ -1,9 +1,6 @@
 import express from 'express';
-import {
-  getUsers,
-  registerUser,
-  loginUser,
-} from './controllers/user.controller.js';
+import { getUsers } from './controllers/user.controller.js';
+import { registerUser, loginUser } from './controllers/auth.controller.js';
 
 const app = express();
 

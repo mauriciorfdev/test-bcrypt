@@ -4,10 +4,13 @@
 
 Simple REST API built with Express to demonstrate user authentication using Bcrypt and Mongoose.
 
-The project simulates a basic register/login flow for users where the API:
+The project simulates a basic authentication flow where users can:
 
-- Stores name, email and hashed password.
-- Allows access when their credentials are sent.
+- Register with name, email and password.
+- Store passwords securely using hash.
+- Login using valid credentials.
+
+Passwords are automatically hashed using a Mongoose pre-save hook before being stored in MongoDB
 
 ## Folder Structure Overview
 
@@ -17,6 +20,7 @@ The project simulates a basic register/login flow for users where the API:
 │   └── db.js
 ├── controllers
 │   └── user.controller.js
+│   └── auth.controller.js
 ├── models
 │   └── user.model.js
 ├── app.js
@@ -33,7 +37,9 @@ _The following files are omitted for simplicity: `.env`, `.gitignore`, `package.
 
 **user.model.js:** User schema and model definition
 
-**user.controller.js:** Handles requests and responses for authentication endpoints
+**user.controller.js:** Handles requests and responses for users endpoints
+
+**auth.controller.js:** Handles requests and responses for authentication endpoints
 
 ## API Endpoints
 
