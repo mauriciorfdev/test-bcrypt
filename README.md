@@ -23,23 +23,25 @@ Passwords are automatically hashed using a Mongoose pre-save hook before being s
 │   └── auth.controller.js
 ├── models
 │   └── user.model.js
+├── routes
+│   ├── auth.routes.js
+│   └── user.routes.js
 ├── app.js
 └── server.js
 ```
 
 _The following files are omitted for simplicity: `.env`, `.gitignore`, `package.json`, `package-lock.json`, `README.md`_
 
-**app.js:** Express app configuration and endpoints
-
-**server.js:** Starts the server
-
-**db.js:** MongoDB connection
-
-**user.model.js:** User schema and model definition
-
-**user.controller.js:** Handles requests and responses for users endpoints
-
-**auth.controller.js:** Handles requests and responses for authentication endpoints
+| File               | Description                                               |
+| ------------------ | --------------------------------------------------------- |
+| app.js             | Express application setup, main router entry point        |
+| server.js          | Starts the server                                         |
+| db.js              | MongoDB connection                                        |
+| user.model.js      | User schema and model definition                          |
+| user.controller.js | Handles requests / responses for users endpoints          |
+| auth.controller.js | Handles requests / responses for authentication endpoints |
+| user.router.js     | Routing logic for user endpoints                          |
+| auth.router.js     | Routing logic for authentication endpoints                |
 
 ## API Endpoints
 

@@ -1,15 +1,13 @@
 import express from 'express';
-import { getUsers } from './controllers/user.controller.js';
-import { registerUser, loginUser } from './controllers/auth.controller.js';
+import userRoutes from './routes/user.routes.js';
+import authRoutes from './routes/auth.routes.js';
 
 const app = express();
 
 app.use(express.json());
 
-app.get('/api/users', getUsers);
+app.use('/api/users', userRoutes);
 
-app.post('/api/auth/register', registerUser);
-
-app.post('/api/auth/login', loginUser);
+app.use('/api/auth', authRoutes);
 
 export { app };
