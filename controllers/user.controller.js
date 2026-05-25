@@ -3,13 +3,9 @@ import { UserModel } from '../models/user.model.js';
 // DESC Get All Users
 // ROUTE GET /api/users
 async function getUsers(req, res) {
-  try {
-    const users = await UserModel.find().select('name email');
+  const users = await UserModel.find().select('name email');
 
-    return res.status(200).json(users);
-  } catch (error) {
-    return res.status(500).json({ msg: 'Internal Server Error' });
-  }
+  return res.status(200).json(users);
 }
 
 export { getUsers };

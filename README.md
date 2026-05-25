@@ -34,17 +34,18 @@ Passwords are automatically hashed using a Mongoose pre-save hook before being s
 
 _The following files are omitted for simplicity: `.env`, `.gitignore`, `package.json`, `package-lock.json`, `README.md`_
 
-| File               | Description                                               |
-| ------------------ | --------------------------------------------------------- |
-| app.js             | Router and Middleware                                     |
-| server.js          | Starts the server                                         |
-| db.js              | MongoDB connection                                        |
-| user.model.js      | User schema and model definition                          |
-| user.controller.js | Handles requests / responses for users endpoints          |
-| auth.controller.js | Handles requests / responses for authentication endpoints |
-| user.router.js     | Routing logic for user endpoints                          |
-| auth.router.js     | Routing logic for authentication endpoints                |
-| notFound.js        | Middleware to catch and handle unmatched endpoints (404)  |
+| File                  | Description                                               |
+| --------------------- | --------------------------------------------------------- |
+| app.js                | Router and Middleware                                     |
+| server.js             | Starts the server                                         |
+| db.js                 | MongoDB connection                                        |
+| user.model.js         | User schema and model definition                          |
+| user.controller.js    | Handles requests / responses for users endpoints          |
+| auth.controller.js    | Handles requests / responses for authentication endpoints |
+| user.router.js        | Routing logic for user endpoints                          |
+| auth.router.js        | Routing logic for authentication endpoints                |
+| notFound.middlware.js | Middleware to catch and handle unmatched endpoints (404)  |
+| error.middleware.js   | Middleware to centralize error handling                   |
 
 ## API Endpoints
 
