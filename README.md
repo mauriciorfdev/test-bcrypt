@@ -22,7 +22,8 @@ Passwords are automatically hashed using a Mongoose pre-save hook before being s
 │   └── user.controller.js
 │   └── auth.controller.js
 ├── middleware
-│   └── notFound.js
+│   └── notFound.middleware.js
+│   └── error.middleware.js
 ├── models
 │   └── user.model.js
 ├── routes
